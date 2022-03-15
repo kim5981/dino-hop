@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#game{
+    width: 500px;
+    height: 200px;
+    /*---------- border for debugging purposes --------*/
+    border: 1px solid black;
+}
+
+#character{
+    width: 20px;
+    height: 50px;
+     /*---------- bg color for debugging purposes --------*/
+    background-color: red;
+    position: relative;
+    top: 150px;
+}
+
+#block{
+    width: 20px;
+    height: 20px;
+     /*---------- bg color for debugging purposes --------*/
+    background-color: aqua;
+    position: relative;
+    top: 130px;
+    right: 480px;
+}
