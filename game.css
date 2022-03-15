@@ -17,6 +17,22 @@
     background-color: red;
     position: relative;
     top: 150px;
+    animation: jump 500ms infinite;
+}
+
+
+/* we only want jump animation to work when we tell it to (with JS) so let's add a class .animate */
+/* we will toggle this class w/ a JS f'n later */
+.animate{
+    animation: jump 500ms;
+}
+
+/* JUMP animation */
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
 }
 
 #block{
@@ -26,5 +42,12 @@
     background-color: aqua;
     position: relative;
     top: 130px;
-    right: 480px;
+    left: 480px;
+    animation: block 1s infinite linear;
+}
+/*  to have block slide towards character - create animation, then add to block ^^ */
+
+@keyframes block{
+    0%{left: 480px;}
+    100%{left: -40px;}
 }
