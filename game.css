@@ -13,33 +13,28 @@
 
 #ghost{
     position: relative;
-    width: 125px;
-    top: 260px;
+    width: 100px;
+    top: 300px;
 }
 
-
-/* we only want jump animation to work when we tell it to (with JS) so let's add a class .animate */
-/* we will toggle this class w/ a JS f'n later */
 .jump{
-    animation: jump 0.4s linear;
+    animation: jump 0.35s linear;
 }
 
-/* JUMP animation */
 @keyframes jump{
-    0%{top: 220px;}
-    20%{top: 220px;}
-    60%{top: 120px;}
-    100%{top: 220px;}
+    0%{top: 300px;}
+    20%{top: 250px;}
+    60%{top: 150px;}
+    100%{top: 300px;}
 }
 
 #grave{
     position: relative;
-    width: 150px;
-    top: 270px;
+    width: 100px;
+    top: 320px;
     left: 520px;
-    animation: grave 1.5s infinite linear;
+    animation: grave 1.3s infinite linear;
 }
-/*  to have block slide towards character - create animation, then add to block ^^ */
 
 @keyframes grave{
     0%{left: 520px;}

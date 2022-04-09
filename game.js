@@ -25,3 +25,27 @@ document.addEventListener( "keydown", evt => {
         jump()
     }
 });
+
+const alive = setInterval( () => {
+    //get position of ghost as it moves along "top"  (y-axis)
+    const ghostTop = parseInt(
+        window.getComputedStyle(ghost)
+        .getPropertyValue("top")
+        );
+
+    // get position of grave as it moves "left" (x-axis)
+    const graveLeft = parseInt(
+        window.getComputedStyle(grave)
+        .getPropertyValue("left")
+    )
+
+    // console.log("grave: ", graveLeft); //-200ish
+    // console.log("ghost: ", ghostTop); // 260
+
+    //detect collision
+    if ( graveLeft< 35  && graveLeft > 20 && ghostTop>= 300  ) {
+       //collision
+       alert("game over!")
+    }
+
+}, 10);
