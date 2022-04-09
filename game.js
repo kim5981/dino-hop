@@ -1,17 +1,27 @@
-//this is game.js
 
 // ----------- CREATE CHARACTERS
 
-const character = document.querySelector('#character');
-character.src= "https://im2.ezgif.com/tmp/ezgif-2-ab210f8700.gif";
+const game = document.querySelector("#game")
 
-const block = document.querySelector("#block")
-block.src="https://im2.ezgif.com/tmp/ezgif-2-143abd5a86.png"
+const ghost = document.querySelector("#ghost");
+ghost.src= "./assets/ghost.png";
+
+const grave = document.querySelector("#grave");
+grave.src= "./assets/tombstone.png";
 
 // ------------- CREATE ACTION FUNCTIONS
 
 function jump () {
-    character.classList.toggle("animate");
+    if( ghost.classList != "jump" ) {
+        ghost.classList.add("jump")
+    setTimeout( () => {
+        ghost.classList.remove("jump");
+        }, 350 )
+    }
 }
 
-character.addEventListener( "click", () => jump() )
+document.addEventListener( "keydown", evt => {
+    if( evt.key === " " || evt.code === "Space") {
+        jump()
+    }
+});
