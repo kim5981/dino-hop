@@ -36,14 +36,14 @@
     position: relative;
     width: 150px;
     top: 270px;
-    left: 480px;
-    animation: block 1.5s infinite linear;
+    left: 520px;
+    animation: grave 1.5s infinite linear;
 }
 /*  to have block slide towards character - create animation, then add to block ^^ */
 
-@keyframes block{
-    0%{left: 480px;}
-    100%{left: -40px;}
+@keyframes grave{
+    0%{left: 520px;}
+    100%{left: -320px;}
 }
 
 
